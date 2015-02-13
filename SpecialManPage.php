@@ -28,6 +28,7 @@ $wgSpecialPageGroups[ 'ManPage' ] = 'reference';	// for [[Special:SpecialPages]]
 // value of "specialpages-group-reference" in i18n file will display as the section title
 $wgSpecialPages[ 'ManPage' ] = 'SpecialManPage';	// this specifies the class MW will try to load
 
+/*
 if (!defined('LIBMGR')) {
     require('libmgr.php');
 }
@@ -35,4 +36,4 @@ clsLibMgr::Add('menus',		KFP_MW_LIB.'/menu.php',__FILE__,__LINE__);
 clsLibMgr::Add('richtext',	KFP_MW_LIB.'/richtext.php',__FILE__,__LINE__);
 clsLibMgr::Load('menus'		,__FILE__,__LINE__);
 clsLibMgr::Load('richtext'	,__FILE__,__LINE__);
-
+*/
