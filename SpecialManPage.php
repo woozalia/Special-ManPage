@@ -10,6 +10,10 @@
 	2010-09-06 0.0 (Wzl) Started writing
         2012-01-17 1.0 (Wzl) Tidying up for MW 1.18
 	2013-07-21 1.1 (Wzl) Fixing for MW 1.20 - split into 3 files
+	2017-12-21 1.11 (Wzl) Removed superfluous loading of 'ferreteria.mw.1'
+	  Still generates an error in line 369 of /var/www/php/ferreteria/mw/app-specialpage.php:
+	    "2017-12-03 Does anything still use this?"
+	    ...but it doesn't work anyway because man no longer has the same HTML output.
 */
 
 $wgExtensionCredits['specialpage'][] = array(
@@ -19,7 +23,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'url' => 'http://htyp.org/SpecialManPage', 
 	'description' => 'special page for displaying manpages',	// for [[Special:Version]]
 	'descriptionmsg' => 'specialmanpage-desc',
-	'version'  => '1.1 2013-07-21',
+	'version'  => '1.11 2017-12-21',
        );
 $wgAutoloadClasses[ 'SpecialManPage' ] = __DIR__ . '/SpecialManPage.main.php'; # Location of the extension's main class
 $wgExtensionMessagesFiles['ManPage'] = dirname( __FILE__ ) . '/SpecialManPage.i18n.php';

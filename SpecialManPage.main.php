@@ -8,12 +8,11 @@ clsLibMgr::Add('richtext',	KFP_MW_LIB.'/richtext.php',__FILE__,__LINE__);
 clsLibMgr::Load('menus'		,__FILE__,__LINE__);
 clsLibMgr::Load('richtext'	,__FILE__,__LINE__);
 */
+//fcCodeLibrary::Load_byName('ferreteria.mw.1');
 
-// 2015-02-12 Eventually, ModLoader should know where all the config-libs files are,
-//	and we'll just ask it to load the ones we need.
-require(KFP_LIB_MW.'/config-libs.php');
+fcApp_MW::Make();	// create the application object if it hasn't already been
 
-class SpecialManPage extends SpecialPageApp {
+class SpecialManPage extends \ferreteria\mw\cSpecialPage {
 //=======
 // STATIC
 
