@@ -19,7 +19,7 @@ $wgExtensionCredits['specialpage'][] = array(
 	'url' => 'http://htyp.org/SpecialManPage', 
 	'description' => 'special page for displaying manpages',	// for [[Special:Version]]
 	'descriptionmsg' => 'specialmanpage-desc',
-	'version'  => '1.1 2013-07-21',
+	'version'  => '1.11 2018-03-19',
        );
 $wgAutoloadClasses[ 'SpecialManPage' ] = __DIR__ . '/SpecialManPage.main.php'; # Location of the extension's main class
 $wgExtensionMessagesFiles['ManPage'] = dirname( __FILE__ ) . '/SpecialManPage.i18n.php';

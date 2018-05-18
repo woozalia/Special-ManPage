@@ -12,8 +12,9 @@ define('KS_CHAR_URL_ASSIGN',':');
 class SpecialManPage extends \SpecialPage {
     use \ferreteria\mw\tSpecialPage;
 
+    
     public function __construct() {
-	parent::__construct( 'ManPage' );
+	parent::__construct( 'ManPage' );	// this needs to match $wg* array keys in main declaration file
     }
     protected function Go() {
 	global $wgUser;
@@ -75,7 +76,8 @@ class SpecialManPage extends \SpecialPage {
     public function ShowHelp() {
 	global $wgOut;
 
-	$out = '<b>Format</b>: '.$this->BaseURL().'/page:<i>man-page-name</i>';
+	$urlPage = \fcApp::Me()->GetKioskObject()->GetPagePath();
+	$out = "<b>Request Format</b>: $urlPage/page:<i>man-page-name</i>";
 	$wgOut->AddHtml($out);
     }
 }
